@@ -1,0 +1,12 @@
+CollatzConjecture_: x
+	| i valuee i2|
+	i := 0.
+	valuee := x+0.
+	[ valuee ~= 1 ] whileTrue: [
+		valuee := (valuee isDivisibleBy: 2) ifTrue: [ valuee / 2 ] ifFalse: [ valuee * 3 + 1 ].
+		i := i + 1.
+	].
+	i2 := i+1.
+	[ i2 > 0 ] whileTrue: [ Transcript show:'*'. 
+	i2 := i2-1.
+	].
